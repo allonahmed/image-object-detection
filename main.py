@@ -6,7 +6,8 @@ detector = ObjectDetection()
 model_path = "./models/yolo-tiny.h5"
 # webp images do not work
 # should add convertor
-input_path = "./input/test45.jpg"
+input_path = "./input/nyctest.jpeg"
+
 output_path = "./output/newimage.jpg"
 
 detector.setModelTypeAsTinyYOLOv3()
