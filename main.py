@@ -4,7 +4,9 @@ from imageai.Detection import ObjectDetection
 detector = ObjectDetection()
 
 model_path = "./models/yolo-tiny.h5"
-input_path = "./input/sneaker.jpg"
+# webp images do not work
+# should add convertor
+input_path = "./input/test45.jpg"
 output_path = "./output/newimage.jpg"
 
 detector.setModelTypeAsTinyYOLOv3()
