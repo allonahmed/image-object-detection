@@ -9,3 +9,5 @@ fashion_mnist = tf.keras.datasets.fashion_mnist
 # model is tested agaijnmst the test set: the test_images and test_labels arrays
 (train_images, train_labels), (test_images, test_labels) = fashion_mnist.load_data()
 
+print('train images:', train_images)
+print('train labels:', train_labels)
