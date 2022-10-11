@@ -27,11 +27,16 @@ def ExploreData():
 
 ExploreData()
 
-def PlotImage():
-  plt.figure()
-  plt.imshow(train_images[0])
-  plt.colorbar()
-  plt.grid(False)
+def PlotImage(count):
+  plt.figure(figsize=(10,10))
+  for i in range(count):
+      plt.subplot(5,5,i+1)
+      plt.xticks([])
+      plt.yticks([])
+      # plt.colorbar(label="colors", orientation="horizontal")
+      plt.grid(False)
+      plt.imshow(train_images[i], cmap=plt.cm.binary)
+      plt.xlabel(class_names[train_labels[i]])
   plt.show()
 
-PlotImage()
+PlotImage(25)
