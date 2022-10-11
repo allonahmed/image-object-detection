@@ -1,6 +1,6 @@
 import tensorflow as tf
 import numpy
-import matplotlib.pyplot as pytplot
+import matplotlib.pyplot as plt
 
 # loads fashion mnist data directly from TensorFlow
 fashion_mnist = tf.keras.datasets.fashion_mnist
@@ -26,3 +26,12 @@ def ExploreData():
   print('test labels: ', test_labels)
 
 ExploreData()
+
+def PlotImage():
+  plt.figure()
+  plt.imshow(train_images[0])
+  plt.colorbar()
+  plt.grid(False)
+  plt.show()
+
+PlotImage()
