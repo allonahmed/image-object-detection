@@ -40,3 +40,12 @@ def PlotImage(count):
     plt.xlabel(class_names[train_labels[i]])
   plt.show()
 
+### Building the model
+
+# To build a 'neural network', we must configure the layers of the model, then we compile it
+# much of deep learning consists of chaining together these layers.
+model = tf.keras.Seqential([
+  tf.keras.layers.Flatten(input_shape=(28, 28)),
+  tf.keras.layers.Dense(128, activation='relu'),
+  tf.keras.layers.Dense(10)
+])
