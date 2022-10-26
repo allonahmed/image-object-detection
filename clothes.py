@@ -9,7 +9,7 @@ fashion_mnist = tf.keras.datasets.fashion_mnist
 # lables contain the classification options (trouser, shirt, ect...)
 # images are 28x28 numpy arrays with pixels ranging from 0 to 255
 # model is tested against the test set: the test_images and test_labels arrays
-(train_images, train_labels), (test_images, test_labels) = fashion_mnist.load_data()
+( train_images, train_labels ), ( test_images, test_labels ) = fashion_mnist.load_data()
 
 # we can map our labels to these class names for better data insights
 class_names = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat', 'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
@@ -27,16 +27,16 @@ def ExploreData():
 
 ExploreData()
 
+# using matplot to plot x amount of training images and their classification
 def PlotImage(count):
   plt.figure(figsize=(10,10))
   for i in range(count):
-      plt.subplot(5,5,i+1)
-      plt.xticks([])
-      plt.yticks([])
-      # plt.colorbar(label="colors", orientation="horizontal")
-      plt.grid(False)
-      plt.imshow(train_images[i], cmap=plt.cm.binary)
-      plt.xlabel(class_names[train_labels[i]])
+    plt.subplot(5,5,i+1)
+    plt.xticks([])
+    plt.yticks([])
+    # plt.colorbar(label="colors", orientation="horizontal")
+    plt.grid(False)
+    plt.imshow(train_images[i], cmap=plt.cm.binary)
+    plt.xlabel(class_names[train_labels[i]])
   plt.show()
 
-PlotImage(25)
