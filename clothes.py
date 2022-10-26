@@ -44,8 +44,15 @@ def PlotImage(count):
 
 # To build a 'neural network', we must configure the layers of the model, then we compile it
 # much of deep learning consists of chaining together these layers.
+'''
+  Flatten layer method transforms our shape from a 28x28 pixel to a 1d array (28*28 in length). Simply used for formatting our data by lining them up
+  Dense layers are then performed in sequence after. The first layer has 128 nodes (or neurons)
+  The second dense layer returns a logits array with a length of 10. 
+  Each node contains a score that indicates the current image belongs to one of the ten classes
+'''
 model = tf.keras.Seqential([
   tf.keras.layers.Flatten(input_shape=(28, 28)),
   tf.keras.layers.Dense(128, activation='relu'),
   tf.keras.layers.Dense(10)
 ])
+
